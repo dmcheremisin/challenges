@@ -49,11 +49,11 @@ import java.util.Set;
 public class Parenthesis {
 
     public static void main(String[] args) {
-        List<String> strings = new Parenthesis().generateParenthesis(4);
+        List<String> strings = generateParenthesis(4);
         strings.forEach(System.out::println);
     }
 
-    public List<String> generateParenthesis(int n) {
+    public static List<String> generateParenthesis(int n) {
         int lastIndex = 2 * n - 1;
 
         Set<Set<Integer>> setOfSets = new HashSet<>();
@@ -62,7 +62,7 @@ public class Parenthesis {
         return convertSetsOfIntsToStrings(lastIndex, setOfSets);
     }
 
-    private List<String> convertSetsOfIntsToStrings(int lastIndex, Set<Set<Integer>> setOfSets) {
+    private static List<String> convertSetsOfIntsToStrings(int lastIndex, Set<Set<Integer>> setOfSets) {
         List<String> listOfStrings = new ArrayList<>();
         for (Set<Integer> setOfInts : setOfSets) {
             StringBuilder parenthesis = new StringBuilder();
@@ -74,7 +74,7 @@ public class Parenthesis {
         return listOfStrings;
     }
 
-    private void getIntegers(int itemNumber, int position, int n, int lastIndex, Set<Integer> set,
+    private static void getIntegers(int itemNumber, int position, int n, int lastIndex, Set<Integer> set,
                              Set<Set<Integer>> setOfSets) {
         if (itemNumber >= n) {
             setOfSets.add(set);
