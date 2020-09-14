@@ -25,8 +25,8 @@ public class HouseRobber {
         result += nums[position];
         sums.add(result);
 
-        for (int i = 2; position + i <= lastIndex; i++)
-            recursiveSum(nums, position + i, result, sums, length);
+        recursiveSum(nums, position + 2, result, sums, length);
+        recursiveSum(nums, position + 3, result, sums, length);
     }
 }
 
