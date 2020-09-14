@@ -2,7 +2,7 @@ package com.coding.challenges.leetcode.challenge092020;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class HouseRobberTest {
 
@@ -52,6 +52,25 @@ public class HouseRobberTest {
                 209, 18, 55, 122, 65, 66, 177, 101, 63, 201, 172, 130, 103, 225, 142, 46, 86, 185, 62, 138, 212, 192,
                 125, 77, 223, 188, 99, 228, 90, 25, 193, 211, 84, 239, 119, 234, 85, 83, 123, 120, 131, 203, 219, 10,
                 82, 35, 120, 180, 249, 106, 37, 169, 225, 54, 103, 55, 166, 124});
-        assertEquals(3365, robbed);
+        assertEquals(7067, robbed);
     }
+
+    @Test
+    public void rob8() {
+        int robbed = houseRobber.rob(new int[]{});
+        assertEquals(0, robbed);
+    }
+
+    @Test
+    public void rob9() {
+        int robbed = houseRobber.rob(new int[]{0});
+        assertEquals(0, robbed);
+    }
+
+    @Test
+    public void rob10() {
+        int robbed = houseRobber.rob(new int[]{1, 1, 3, 6, 7, 10, 7, 1, 8, 5, 9, 1, 4, 4, 3});
+        assertEquals(42, robbed);
+    }
+
 }
