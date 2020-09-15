@@ -1,8 +1,5 @@
 package com.coding.challenges.leetcode.challenge092020;
 
-import java.util.Set;
-import java.util.TreeSet;
-
 public class HouseRobberSolution {
 
     public int rob(int[] nums) {
@@ -12,9 +9,9 @@ public class HouseRobberSolution {
 
         int pMax = 0;
         int cMax = 0;
-        for(int n = 0; n < nums.length; n++){
+        for (int num : nums) {
             int temp = cMax;
-            cMax = Math.max(pMax + nums[n], cMax);
+            cMax = Math.max(pMax + num, cMax);
             pMax = temp;
         }
 
