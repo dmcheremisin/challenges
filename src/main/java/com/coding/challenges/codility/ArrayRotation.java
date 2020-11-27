@@ -39,7 +39,7 @@ package com.coding.challenges.codility;
 //each element of array A is an integer within the range [−1,000..1,000].
 //In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
-class ArrayRotation {
+public class ArrayRotation {
 
     public static void main(String[] args) {
         ArrayRotation arrayRotation = new ArrayRotation();
